@@ -79,16 +79,13 @@ namespace Unit04.Game.Directing
             artifact.GetVelocity();
             artifact.SetVelocity(velocity);
 
-            banner.SetText($"score: {score.ToString()}");
+            banner.SetText($"Score: {score.ToString()}");
             int maxX = videoService.GetWidth();
             int maxY = videoService.GetHeight();
             robot.MoveNext(maxX, maxY);
 
             foreach (Actor actor in artifacts)
             {
-
-                // maxX = videoService.GetWidth();
-                // maxY = videoService.GetHeight();
                 actor.MoveNext(maxX, maxY);
                 if (robot.GetPosition().Equals(actor.GetPosition()))
                 {
@@ -96,13 +93,6 @@ namespace Unit04.Game.Directing
 
                     score += artifactt.GetScore();
                     banner.SetText($"score: {score}");
-
-                    // int x = 0;
-                    // int y = 1;
-                    // Point position = new Point(x,y);
-                    // // position = position.Scale(15);
-
-                    // artifact.SetPosition(position);
                 }
             }
         }

@@ -24,7 +24,7 @@ namespace Unit04
         private static string CAPTION = "Greed Game";
         private static string DATA_PATH = "Data/messages.txt";
         private static Color WHITE = new Color(255, 255, 255);
-        private static int DEFAULT_ARTIFACTS = 20;
+        private static int DEFAULT_ARTIFACTS = 10;
 
 
 
@@ -62,12 +62,8 @@ namespace Unit04
             Random random = new Random();
             for (int i = 0; i < DEFAULT_ARTIFACTS; i++)
             {
-                string text = ((char)(42)).ToString(); //==> a star (*)
-
-                // text.ToArray();
-
-
-                // string message = messages[i];
+                // Star (*)
+                string text = ((char)(42)).ToString(); 
 
                 int x = random.Next(1, COLS);
                 int y = random.Next(1, ROWS);
@@ -91,12 +87,8 @@ namespace Unit04
 
             for (int i = 0; i < DEFAULT_ARTIFACTS; i++)
             {
-                string text = ((char)(111)).ToString(); //==> a rock (o)
-
-                // text.ToArray();
-
-
-                // string message = messages[i];
+                // Rock (o)
+                string text = ((char)(111)).ToString(); 
 
                 int x = random.Next(1, COLS);
                 int y = random.Next(1, ROWS);
