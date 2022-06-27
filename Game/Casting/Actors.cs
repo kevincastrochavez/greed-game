@@ -3,13 +3,6 @@ using System;
 
 namespace Unit04.Game.Casting
 {
-    /// <summary>
-    /// <para>A thing that participates in the game.</para>
-    /// <para>
-    /// The responsibility of Actor is to keep track of its appearance, position and velocity in 2d 
-    /// space.
-    /// </para>
-    /// </summary>
     public class Actor
     {
         private string text = "";
@@ -18,65 +11,35 @@ namespace Unit04.Game.Casting
         private Point position = new Point(0, 0);
         private Point velocity = new Point(0,0);
 
-        /// <summary>
-        /// Constructs a new instance of Actor.
-        /// </summary>
         public Actor()
         {
         }
 
-        /// <summary>
-        /// Gets the actor's color.
-        /// </summary>
-        /// <returns>The color.</returns>
         public Color GetColor()
         {
             return color;
         }
 
-        /// <summary>
-        /// Gets the actor's font size.
-        /// </summary>
-        /// <returns>The font size.</returns>
         public int GetFontSize()
         {
             return fontSize;
         }
 
-        /// <summary>
-        /// Gets the actor's position.
-        /// </summary>
-        /// <returns>The position.</returns>
         public Point GetPosition()
         {
             return position;
         }
 
-        /// <summary>
-        /// Gets the actor's text.
-        /// </summary>
-        /// <returns>The text.</returns>
         public string GetText()
         {
             return text;
         }
 
-        /// <summary>
-        /// Gets the actor's current velocity.
-        /// </summary>
-        /// <returns>The velocity.</returns>
         public Point GetVelocity()
         {
             return velocity;
         }
 
-        /// <summary>
-        /// Moves the actor to its next position according to its velocity. Will wrap the position 
-        /// from one side of the screen to the other when it reaches the maximum x and y 
-        /// values.
-        /// </summary>
-        /// <param name="maxX">The maximum x value.</param>
-        /// <param name="maxY">The maximum y value.</param>
         public void MoveNext(int maxX, int maxY)
         {
             int x = ((position.GetX() + velocity.GetX()) + maxX) % maxX;
